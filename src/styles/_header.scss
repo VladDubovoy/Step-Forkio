@@ -1,0 +1,262 @@
+.header {
+  z-index: 1;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  background: #27262a;
+  padding: 25.5px 0px;
+  @media (min-width: 481px) {
+    padding: 20px 0 58px 0;
+  }
+
+  @media (min-width: 993px) {
+    background-color: transparent;
+    padding: 30px 0px 0px 0px;
+  }
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  width: 43px;
+  display: flex;
+  height: 41px;
+  position: relative;
+  overflow: hidden;
+  @media (min-width: 481px) {
+    width: 150px;
+  }
+
+  .logo__svg {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    height: 100%;
+  }
+
+  .logo__path {
+    transition: fill 0.3s ease-in-out;
+  }
+
+  &:hover .logo__path {
+    fill: #fff;
+
+    @media (min-width: 993px) {
+      order: 1;
+    }
+  }
+}
+
+.buy-now {
+  background-color: #8d81ac;
+  border-radius: 40px;
+  width: 120px;
+  padding: 11px 0px;
+  text-align: center;
+  font-family: $montserrat;
+  font-weight: 700;
+  color: #fff;
+  font-size: 15px;
+  line-height: 15px;
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    background-color: #fff;
+    color: #8d81ac;
+  }
+
+  @media (min-width: 481px) {
+    width: 145px;
+    font-size: 16px;
+    line-height: 16px;
+  }
+  @media (min-width: 993px) {
+    order: 3;
+  }
+}
+
+.menu-burger {
+  position: relative;
+  width: 26px;
+  height: 21px;
+  display: block;
+  cursor: pointer;
+  background-color: transparent;
+  @media (min-width: 481px) {
+    display: none;
+  }
+
+  & .menu-burger__span,
+  &::before,
+  &::after {
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background-color: #fff;
+    display: block;
+    transition: all 0.3s ease-in-out;
+    right: 0px;
+    border-radius: 5px;
+  }
+
+  &::before,
+  &::after {
+    content: "";
+  }
+
+  &::before {
+    top: 0px;
+    width: 15px;
+  }
+
+  & .menu-burger__span {
+    top: 9px;
+  }
+
+  &::after {
+    top: 18px;
+  }
+}
+
+.menu-burger--open .menu-burger__span {
+  &:nth-child(1) {
+    transform: rotate(45deg);
+  }
+  &:nth-child(2) {
+    transform: rotate(-45deg);
+  }
+}
+
+.menu-burger--open {
+  &::before,
+  &:after {
+    width: 0px;
+    top: 9px;
+    right: 50%;
+  }
+}
+
+.navigation {
+  position: absolute;
+  top: 100px;
+  left: 10px;
+  right: 10px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(100px);
+  transition: all 0.4s ease-in-out;
+  @media (min-width: 481px) {
+    position: absolute;
+    visibility: visible;
+    opacity: 1;
+    top: 85px;
+    transform: translateY(0px);
+    transition: none;
+    margin: 0 auto;
+    flex: 1 1 auto;
+  }
+
+  @media (min-width: 993px) {
+    position: static;
+    top: 0;
+    left: 0;
+    right: 0;
+    order: 2;
+  }
+}
+
+.navigation--open {
+  opacity: 1;
+  transform: translateY(0px);
+  visibility: visible;
+}
+
+.navigation__list {
+  background-color: #333;
+  display: flex;
+  flex-direction: column;
+  padding: 0 0 14px 0;
+  justify-content: center;
+
+  @media (min-width: 481px) {
+    background-color: transparent;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 0px;
+  }
+  @media (min-width: 993px) {
+    justify-content: flex-end;
+  }
+}
+
+.navigation__item {
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding: 31px 0px 31px 40px;
+  border-bottom: 3px solid #3b3b3b;
+  transition: all 0.3s ease-in-out;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0px;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 50px;
+    width: 8px;
+    display: block;
+    opacity: 0;
+    background-color: #8d81ac;
+    transition: all 0.3s ease-in-out;
+  }
+
+  &:hover::before {
+    opacity: 1;
+  }
+
+  &:hover .navigation__link,
+  &:active .navigation__link,
+  &:focus .navigation__link {
+    color: #8d81ac;
+    @media (min-width: 481px) {
+      color: #fff;
+    }
+  }
+
+  @media (min-width: 481px) {
+    padding: 0px;
+    border-bottom: none;
+
+    &::before {
+      display: none;
+    }
+  }
+  @media (min-width: 993px) {
+    margin-right: 48px;
+  }
+}
+
+.navigation__link {
+  font-size: 26px;
+  line-height: 26px;
+  font-weight: 400;
+  transition: color 0.3s ease-in-out;
+  color: #fff;
+  font-family: $montserrat;
+
+  @media (min-width: 481px) {
+    color: #8d81ac;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 18px;
+  }
+  @media (min-width: 768px) {
+    font-size: 16px;
+  }
+}

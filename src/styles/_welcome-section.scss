@@ -1,0 +1,148 @@
+.welcome-section {
+  position: relative;
+  background-color: #000;
+  background-image: url(../img/welcome.webp);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  min-height: 718px;
+  @media (min-width: 481px) {
+    min-height: 800px;
+  }
+}
+
+.welcome-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.welcome-title {
+  margin-top: 155px;
+  font-weight: 700;
+  font-family: $montserrat;
+  color: #fff;
+  font-size: calc(48px + (72 - 48) * ((100vw - 320px) / (767 - 320)));
+  line-height: calc(48px + (72 - 48) * ((100vw - 320px) / (767 - 320)));
+
+  @media (min-width: 481px) {
+    margin-top: 187px;
+  }
+
+  @media (min-width: 768px) {
+    font-size: calc(72px + (82 - 72) * ((100vw - 768px) / (1200 - 768)));
+    line-height: calc(72px + (82 - 72) * ((100vw - 768px) / (1200 - 768)));
+  }
+
+  @media (min-width: 1200px) {
+    font-size: 82px;
+    line-height: 82px;
+  }
+}
+
+.welcome-subtitle {
+  margin-top: 19px;
+  color: #8d81ac;
+  font-size: 18px;
+  line-height: 24px;
+  font-family: $montserrat;
+  text-align: center;
+
+  @media (min-width: 481px) {
+    display: none;
+  }
+}
+
+.welcome-subtitle-tablet {
+  display: none;
+
+  @media (min-width: 481px) {
+    font-family: $lato;
+    display: block;
+    font-size: calc(18px + (24 - 18) * ((100vw - 481px) / (767 - 481)));
+    line-height: calc(18px + (24 - 18) * ((100vw - 481px) / (767 - 481)));
+    margin-top: 19px;
+    color: #8d81ac;
+    text-align: center;
+  }
+
+  @media (min-width: 768px) {
+    font-size: calc(24px + (30 - 24) * ((100vw - 768px) / (1200 - 768)));
+    line-height: calc(24px + (30 - 24) * ((100vw - 768px) / (1200 - 768)));
+  }
+
+  @media (min-width: 1200px) {
+    font-size: 30px;
+    line-height: 30px;
+  }
+}
+
+.welcome-text {
+  color: #848e97;
+  margin-top: 14px;
+  font-size: 14px;
+  line-height: 14px;
+  text-transform: uppercase;
+  font-family: $montserrat;
+
+  @media (min-width: 481px) {
+    margin-top: 19px;
+  }
+  @media (min-width: 993px) {
+    font-size: 16px;
+    line-height: 16px;
+  }
+}
+
+.welcome-download {
+  position: absolute;
+  left: 10px;
+  right: 10px;
+  bottom: 0px;
+  margin: 0 auto;
+  transform: translateY(50%);
+  background-color: #8d81ac;
+  border-radius: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 290px;
+  font-size: 18px;
+  line-height: 20px;
+  font-family: $montserrat;
+  color: #fff;
+  font-weight: 700;
+  padding: 12.5px 0px;
+  border: 2px solid #8d81ac;
+  transition: all 0.5s ease-in-out;
+
+  &:hover {
+    background-color: #fff;
+    color: #8d81ac;
+  }
+
+  @media (min-width: 481px) {
+    width: 390px;
+    padding: 18px 0px;
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  @media (min-width: 768px) {
+    font-size: 21px;
+    line-height: 23px;
+  }
+}
+
+.welcome-trial {
+  position: absolute;
+  bottom: -49px;
+  color: #848e97;
+  font-size: 14px;
+  line-height: 14px;
+  font-family: $montserrat;
+  @media (min-width: 481px) {
+    bottom: -64px;
+  }
+}
