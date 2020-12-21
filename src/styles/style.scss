@@ -19,9 +19,5 @@
   margin: 0 auto;
   padding: 0px 10px;
   min-width: 320px;
-  max-width: 100%;
-
-  @media (min-width: 993px) {
-    max-width: 1200px;
-  }
+  max-width: 1200px;
 }

@@ -141,8 +141,11 @@
   color: #848e97;
   font-size: 14px;
   line-height: 14px;
+  margin: 0 auto;
   font-family: $montserrat;
   @media (min-width: 481px) {
     bottom: -64px;
+    left: 10px;
+    right: 10px;
   }
 }
