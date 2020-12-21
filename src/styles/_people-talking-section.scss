@@ -22,19 +22,25 @@
   font-family: $montserrat;
   color: #fff;
   text-align: center;
-  font-size: 36px;
   line-height: 48px;
   margin-bottom: 50px;
+  font-size: calc(36px + (42 - 36) * ((100vw - 320px) / (768 - 320)));
 
   @media (min-width: 481px) {
-    font-size: 42px;
     line-height: 44px;
     margin-bottom: 85px;
   }
 
+  @media (min-width: 768px) {
+    font-size: calc(42px + (48 - 42) * ((100vw - 768px) / (1200 - 768)));
+  }
+
   @media (min-width: 993px) {
-    font-size: 48px;
     line-height: 50px;
+  }
+
+  @media (min-width: 1200px) {
+    font-size: 48px;
   }
 }
 

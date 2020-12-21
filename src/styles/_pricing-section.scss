@@ -17,20 +17,26 @@
   font-family: $montserrat;
   color: #fff;
   text-align: center;
-  font-size: 28px;
-  line-height: 42px;
+  font-size: calc(28px + (42 - 28) * ((100vw - 320px) / (768 - 320)));
+  line-height: calc(42px + (44 - 42) * ((100vw - 320px) / (768 - 320)));
   margin-bottom: 14px;
 
   @media (min-width: 481px) {
-    font-size: 42px;
-    line-height: 44px;
     margin-bottom: 40px;
   }
 
+  @media (min-width: 768px) {
+    font-size: calc(42px + (48 - 42) * ((100vw - 768px) / (1200 - 768)));
+    line-height: calc(44px + (50 - 44) * ((100vw - 768px) / (1200 - 768)));
+  }
+
   @media (min-width: 993px) {
+    margin-bottom: 60px;
+  }
+
+  @media (min-width: 1200px) {
     font-size: 48px;
     line-height: 50px;
-    margin-bottom: 60px;
   }
 }
 
