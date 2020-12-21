@@ -114,6 +114,10 @@
     width: 15px;
   }
 
+  &:hover::before {
+    width: 100%;
+  }
+
   & .menu-burger__span {
     top: 9px;
   }
@@ -138,6 +142,17 @@
     width: 0px;
     top: 9px;
     right: 50%;
+  }
+
+  &:hover::before {
+    width: 0%;
+  }
+
+  &:focus .menu-burger__span:nth-child(1) {
+    transform: rotate(225deg);
+  }
+  &:focus .menu-burger__span:nth-child(2) {
+    transform: rotate(135deg);
   }
 }
 
