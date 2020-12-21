@@ -148,10 +148,10 @@
     width: 0%;
   }
 
-  &:active .menu-burger__span:nth-child(1) {
+  &:hover .menu-burger__span:nth-child(1) {
     transform: rotate(225deg);
   }
-  &:active .menu-burger__span:nth-child(2) {
+  &:hover .menu-burger__span:nth-child(2) {
     transform: rotate(135deg);
   }
 }
