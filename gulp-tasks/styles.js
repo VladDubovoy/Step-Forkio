@@ -10,6 +10,11 @@ const styles = () =>
   src("./src/styles/*.scss")
     .pipe(sourcemaps.init())
     .pipe(sass().on("error", sass.logError))
+    .pipe(
+      cleanCSS({
+        level: 1,
+      })
+    )
     .pipe(cssConcat("style.min.css"))
     .pipe(
       autoprefixer({
@@ -17,7 +22,6 @@ const styles = () =>
         cascade: true,
       })
     )
-    .pipe(cleanCSS({ compatibility: "ie8" }))
     .pipe(sourcemaps.write(""))
     .pipe(dest("./dist/css/"))
     .pipe(browsersync.reload({ stream: true }));
