@@ -12,7 +12,7 @@ const styles = () =>
     .pipe(sass().on("error", sass.logError))
     .pipe(
       cleanCSS({
-        level: 1,
+        level: 2,
       })
     )
     .pipe(cssConcat("style.min.css"))
