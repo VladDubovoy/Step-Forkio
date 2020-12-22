@@ -97,8 +97,8 @@
 
 .welcome-download {
   position: absolute;
-  left: 10px;
-  right: 10px;
+  left: 0px;
+  right: 0px;
   bottom: 0px;
   margin: 0 auto;
   transform: translateY(50%);
@@ -138,14 +138,14 @@
 .welcome-trial {
   position: absolute;
   bottom: -49px;
+  left: 0px;
+  right: 0px;
+  text-align: center;
   color: #848e97;
   font-size: 14px;
   line-height: 14px;
-  margin: 0 auto;
   font-family: $montserrat;
   @media (min-width: 481px) {
     bottom: -64px;
-    left: 10px;
-    right: 10px;
   }
 }
